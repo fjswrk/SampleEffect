@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="D7b-iJ-Yua">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--Top View Controller-->
+        <scene sceneID="gBQ-CO-vrE">
+            <objects>
+                <viewController id="mWE-t2-5IW" customClass="TopViewController" customModule="SampleEffect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AC5-3u-kIa"/>
+                        <viewControllerLayoutGuide type="bottom" id="X4s-2z-Ee6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dsp-8q-fn7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOW-uY-5eW">
+                                <rect key="frame" x="225" y="280" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="at1-gq-xsn"/>
+                                    <constraint firstAttribute="height" constant="40" id="dHs-5k-zf9"/>
+                                </constraints>
+                                <state key="normal" title="Light">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressBtn:" destination="mWE-t2-5IW" eventType="touchUpInside" id="DcB-Em-Kd7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jj-Jt-Nt4">
+                                <rect key="frame" x="225" y="160" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="KDz-nq-9tj"/>
+                                    <constraint firstAttribute="width" constant="150" id="Rzg-No-cfb"/>
+                                </constraints>
+                                <state key="normal" title="ExtraLight">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressBtn:" destination="mWE-t2-5IW" eventType="touchUpInside" id="0p9-L5-aYf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyy-2I-NPR">
+                                <rect key="frame" x="225" y="400" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Aoo-WR-EpS"/>
+                                    <constraint firstAttribute="width" constant="150" id="yXm-pU-nAQ"/>
+                                </constraints>
+                                <state key="normal" title="Dark">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressBtn:" destination="mWE-t2-5IW" eventType="touchUpInside" id="LYm-Nu-d5e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yOW-uY-5eW" firstAttribute="top" secondItem="2jj-Jt-Nt4" secondAttribute="bottom" constant="80" id="EDv-xI-Pk2"/>
+                            <constraint firstItem="dyy-2I-NPR" firstAttribute="top" secondItem="yOW-uY-5eW" secondAttribute="bottom" constant="80" id="KBQ-mU-iSd"/>
+                            <constraint firstAttribute="centerY" secondItem="yOW-uY-5eW" secondAttribute="centerY" id="UKX-Th-pPw"/>
+                            <constraint firstAttribute="centerX" secondItem="2jj-Jt-Nt4" secondAttribute="centerX" id="YhI-Hn-zxE"/>
+                            <constraint firstAttribute="centerX" secondItem="yOW-uY-5eW" secondAttribute="centerX" id="Zgc-fB-u9p"/>
+                            <constraint firstAttribute="centerX" secondItem="dyy-2I-NPR" secondAttribute="centerX" id="eOG-dr-WP5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xf5-zo-deO"/>
+                    <connections>
+                        <outlet property="darkBtn" destination="dyy-2I-NPR" id="3VB-nm-bNc"/>
+                        <outlet property="extraLightBtn" destination="2jj-Jt-Nt4" id="c3g-bt-s5p"/>
+                        <outlet property="lightBtn" destination="yOW-uY-5eW" id="2yj-Q5-1LT"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showBlur" id="9YW-la-175"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zJ9-Pq-Xe7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215" y="136"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleEffect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6Li-k8-CMP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D7b-iJ-Yua" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U4V-h9-nk8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mWE-t2-5IW" kind="relationship" relationship="rootViewController" id="b2i-aV-Isw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5KR-MO-kJV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-597" y="136"/>
+        </scene>
+    </scenes>
+</document>
